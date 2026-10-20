@@ -1,71 +1,132 @@
-name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MYLOZ DATA | Affordable Data Bundles</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MYLOZ DATA - Cheap Data Bundles</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+  color: #172033;
+}
+header {
+  background: #075985;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 12px;
+}
+.container {
+  max-width: 450px;
+  margin: 25px auto;
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0001;
+}
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  background: #94a3b8;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+}
+.notice {
+  background: #fff7ed;
+  padding: 12px;
+  border-radius: 7px;
+  line-height: 1.5;
+}
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #64748b;
+}
+</style>
+</head>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f6fb;
-      color: #172033;
-    }
+<body>
 
-    header {
-      background: #071a35;
-      color: white;
-      padding: 24px 16px;
-      text-align: center;
-    }
+<header>
+  <h1>MYLOZ DATA</h1>
+  <p>Affordable Data Bundles in Ghana</p>
+</header>
 
-    header h1 {
-      color: #35e0a1;
-      font-size: 30px;
-      letter-spacing: 1px;
-    }
+<div class="container">
+  <h2>Buy Data</h2>
+  <p>Select your bundle and enter your phone details.</p>
 
-    header p {
-      margin-top: 10px;
-      color: #dbe5f5;
-    }
+  <form>
+    <label for="network">Network</label>
+    <select id="network" required>
+      <option value="">Choose network</option>
+      <option>MTN Ghana</option>
+      <option>Telecel Ghana</option>
+      <option>AT Ghana</option>
+    </select>
 
-    .hero {
-      background: #0c2850;
-      color: white;
-      text-align: center;
-      padding: 45px 18px;
-    }
+    <label for="bundle">Data Bundle</label>
+    <select id="bundle" required>
+      <option value="">Choose bundle</option>
+      <option>MTN 1GB - GH₵4.50</option>
+      <option>Other bundles - Coming soon</option>
+    </select>
 
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 14px;
-    }
+    <label for="recipient">Recipient Phone Number</label>
+    <input id="recipient" type="tel"
+      placeholder="e.g. 0241234567"
+      pattern="0[0-9]{9}" required>
 
-    .hero p {
-      line-height: 1.6;
-    }
+    <label for="payment">Payment Phone Number</label>
+    <input id="payment" type="tel"
+      placeholder="e.g. 0241234567"
+      pattern="0[0-9]{9}" required>
 
-    .container {
-      max-width: 850px;
-      margin: 30px auto;
-      padding: 0 16px;
-    }
+    <label for="paymentNetwork">Payment Network</label>
+    <select id="paymentNetwork" required>
+      <option value="">Choose payment network</option>
+      <option>MTN MoMo</option>
+      <option>Telecel Cash</option>
+      <option>AT Money</option>
+    </select>
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 22px;
-    }
+    <button type="button" disabled>
+      Online Ordering Coming Soon
+    </button>
+  </form>
 
-    .bundle {
-      background: white;
-      padding: 22px;
-      margin-bottom: 16px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px #0000000d;
-      text-align: center;
-    }
+  <p class="notice">
+    <strong>Important:</strong> Online payments and automatic
+    data delivery are not yet active. Please do not send money
+    through this website yet.
+  </p>
+</div>
 
-    .
+<footer>
+  <p>MYLOZ DATA © 2026</p>
+  <p>Affordable data, made simple.</p>
+</footer>
+
+</body>
+</html>
