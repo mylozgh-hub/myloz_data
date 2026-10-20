@@ -3,65 +3,351 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MYLOZ DATA - Cheap Data Bundles</title>
+<meta name="theme-color" content="#101a35">
+<meta name="description" content="Buy affordable MTN data bundles with MYLOZ DATA in Ghana.">
+<title>MYLOZ DATA | Affordable Data Bundles</title>
 
 <style>
+:root {
+  --yellow: #ffcc00;
+  --navy: #101a35;
+  --blue: #2458d3;
+  --light: #f4f7fc;
+  --text: #172033;
+  --muted: #68738a;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f1f5f9;
   margin: 0;
-  padding: 20px;
-  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
 }
+
 header {
-  background: #075985;
+  background: var(--navy);
   color: white;
-  text-align: center;
-  padding: 25px 10px;
-  border-radius: 12px;
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
-.container {
-  max-width: 450px;
-  margin: 25px auto;
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.status {
+  font-size: 12px;
+  background: #23304d;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #101a35, #2349a5);
+  color: white;
+  padding: 42px 6% 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:after {
+  content: "5G";
+  position: absolute;
+  right: 5%;
+  top: 12px;
+  font-size: clamp(85px, 18vw, 170px);
+  font-weight: 900;
+  color: rgba(255,255,255,.07);
+  transform: rotate(-10deg);
+}
+
+.hero-content {
+  max-width: 760px;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--navy);
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 7vw, 52px);
+  line-height: 1.08;
+  margin: 18px 0 12px;
+}
+
+.hero h1 span {
+  color: var(--yellow);
+}
+
+.hero p {
+  color: #e0e7ff;
+  line-height: 1.7;
+  max-width: 490px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 28px 16px 45px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.network-pill {
+  background: #fff2b8;
+  color: #624b00;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.bundle {
   background: white;
-  padding: 22px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px #0001;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  padding: 19px 15px;
+  box-shadow: 0 5px 20px rgba(18, 32, 65, .06);
 }
+
+.bundle.featured {
+  border-color: var(--yellow);
+}
+
+.bundle-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.mtn-icon {
+  width: 39px;
+  height: 39px;
+  background: var(--yellow);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: #222;
+  font-size: 11px;
+}
+
+.popular {
+  font-size: 10px;
+  font-weight: 800;
+  color: #6a5100;
+  background: #fff2b8;
+  padding: 6px 8px;
+  border-radius: 12px;
+}
+
+.bundle h3 {
+  font-size: 26px;
+  margin: 17px 0 5px;
+}
+
+.bundle p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.price {
+  font-size: 23px;
+  font-weight: 900;
+  margin: 18px 0 13px;
+}
+
+.price small {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.select-btn {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 7px;
+  background: var(--navy);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.featured .select-btn {
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+.select-btn:active {
+  transform: scale(.98);
+}
+
+.panel {
+  margin-top: 30px;
+  padding: 23px 18px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(18, 32, 65, .06);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 23px;
+}
+
+.panel-intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 label {
   display: block;
-  margin-top: 15px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 17px 0 8px;
 }
+
 input, select {
   width: 100%;
-  padding: 12px;
-  margin-top: 7px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  font-size: 16px;
-}
-button {
-  width: 100%;
-  margin-top: 22px;
   padding: 14px;
-  background: #94a3b8;
-  color: white;
-  border: none;
-  border-radius: 7px;
+  border: 1px solid #dbe1ed;
+  border-radius: 11px;
   font-size: 16px;
+  background: white;
+  color: var(--text);
+  outline: none;
 }
-.notice {
-  background: #fff7ed;
-  padding: 12px;
-  border-radius: 7px;
+
+input:focus, select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(36,88,211,.1);
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--muted);
   line-height: 1.5;
+  margin-top: 7px;
 }
+
+.network-result {
+  margin-top: 10px;
+  padding: 11px;
+  border-radius: 10px;
+  background: #edf3ff;
+  color: #2047a4;
+  font-size: 13px;
+  font-weight: 700;
+  display: none;
+}
+
+.summary {
+  margin-top: 22px;
+  padding: 16px;
+  border-radius: 13px;
+  background: #f4f7fc;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.summary span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.summary strong {
+  font-size: 22px;
+}
+
+.checkout {
+  margin-top: 17px;
+  width: 100%;
+  border: 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: #aeb6c7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: not-allowed;
+}
+
+.secure-note {
+  font-size: 12px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 13px;
+}
+
 footer {
   text-align: center;
-  margin-top: 25px;
-  color: #64748b;
+  background: var(--navy);
+  color: #dbe3f6;
+  padding: 27px 16px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer strong {
+  color: var(--yellow);
+}
+
+@media (max-width: 360px) {
+  header { padding: 15px 4%; }
+  .logo { font-size: 19px; }
+  .status { font-size: 10px; }
+  .grid { gap: 9px; }
+  .bundle { padding: 13px 10px; }
+  .bundle h3 { font-size: 23px; }
+  .price { font-size: 20px; }
+  .popular { font-size: 9px; }
 }
 </style>
 </head>
@@ -69,64 +355,227 @@ footer {
 <body>
 
 <header>
-  <h1>MYLOZ DATA</h1>
-  <p>Affordable Data Bundles in Ghana</p>
+  <div class="logo">MYLOZ <span>DATA</span></div>
+  <div class="status">🇬🇭 Ghana Data</div>
 </header>
 
-<div class="container">
-  <h2>Buy Data</h2>
-  <p>Select your bundle and enter your phone details.</p>
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">⚡ SIMPLE • AFFORDABLE • CONVENIENT</span>
+    <h1>Your Data.<br><span>Your Way.</span></h1>
+    <p>
+      Stay connected for less with MYLOZ DATA.
+      Choose your MTN bundle, enter your number and get ready to connect.
+    </p>
+  </div>
+</section>
 
-  <form>
-    <label for="network">Network</label>
-    <select id="network" required>
-      <option value="">Choose network</option>
-      <option>MTN Ghana</option>
-      <option>Telecel Ghana</option>
-      <option>AT Ghana</option>
+<main>
+  <div class="section-heading">
+    <h2>Choose Your Data</h2>
+    <span class="network-pill">💛 MTN ONLY</span>
+  </div>
+
+  <div class="grid">
+    <article class="bundle featured">
+      <div class="bundle-top">
+        <div class="mtn-icon">MTN</div>
+        <span class="popular">POPULAR</span>
+      </div>
+      <h3>1GB Data</h3>
+      <p>MTN Ghana data bundle</p>
+      <div class="price">GH₵4.50</div>
+      <button class="select-btn" onclick="chooseBundle('1GB', 4.50)">
+        Select Bundle
+      </button>
+    </article>
+
+    <article class="bundle">
+      <div class="bundle-top">
+        <div class="mtn-icon">MTN</div>
+      </div>
+      <h3>2GB Data</h3>
+      <p>More data for your day</p>
+      <div class="price">Price pending</div>
+      <button class="select-btn" onclick="showMessage()">
+        Coming Soon
+      </button>
+    </article>
+
+    <article class="bundle">
+      <div class="bundle-top">
+        <div class="mtn-icon">MTN</div>
+      </div>
+      <h3>3GB Data</h3>
+      <p>Browse and stream more</p>
+      <div class="price">Price pending</div>
+      <button class="select-btn" onclick="showMessage()">
+        Coming Soon
+      </button>
+    </article>
+
+    <article class="bundle">
+      <div class="bundle-top">
+        <div class="mtn-icon">MTN</div>
+      </div>
+      <h3>5GB Data</h3>
+      <p>For your bigger data needs</p>
+      <div class="price">Price pending</div>
+      <button class="select-btn" onclick="showMessage()">
+        Coming Soon
+      </button>
+    </article>
+  </div>
+
+  <section class="panel" id="order">
+    <h2>Complete Your Order</h2>
+    <p class="panel-intro">
+      Choose the available bundle and enter the phone numbers below.
+      Check all details carefully before proceeding.
+    </p>
+
+    <label for="bundle">Selected Data Bundle</label>
+    <select id="bundle" onchange="updateSummary()">
+      <option value="1GB" data-price="4.50">MTN 1GB — GH₵4.50</option>
     </select>
 
-    <label for="bundle">Data Bundle</label>
-    <select id="bundle" required>
-      <option value="">Choose bundle</option>
-      <option>MTN 1GB - GH₵4.50</option>
-      <option>Other bundles - Coming soon</option>
-    </select>
-
-    <label for="recipient">Recipient Phone Number</label>
-    <input id="recipient" type="tel"
+    <label for="recipient">Recipient's MTN Phone Number</label>
+    <input
+      id="recipient"
+      type="tel"
+      inputmode="numeric"
+      autocomplete="tel"
       placeholder="e.g. 0241234567"
-      pattern="0[0-9]{9}" required>
+      maxlength="13"
+    >
+    <p class="hint">Enter the Ghanaian number that should receive the data.</p>
 
     <label for="payment">Payment Phone Number</label>
-    <input id="payment" type="tel"
-      placeholder="e.g. 0241234567"
-      pattern="0[0-9]{9}" required>
+    <input
+      id="payment"
+      type="tel"
+      inputmode="numeric"
+      autocomplete="tel"
+      placeholder="Enter your payment number"
+      maxlength="13"
+      oninput="detectNetwork()"
+    >
+    <div id="networkResult" class="network-result"></div>
 
     <label for="paymentNetwork">Payment Network</label>
-    <select id="paymentNetwork" required>
+    <select id="paymentNetwork">
       <option value="">Choose payment network</option>
-      <option>MTN MoMo</option>
-      <option>Telecel Cash</option>
-      <option>AT Money</option>
+      <option value="MTN MoMo">MTN MoMo</option>
+      <option value="Telecel Cash">Telecel Cash</option>
+      <option value="AT Money">AT Money</option>
     </select>
+    <p class="hint">
+      The network is suggested from the number prefix. Please confirm it,
+      because number portability can affect automatic detection.
+    </p>
 
-    <button type="button" disabled>
-      Online Ordering Coming Soon
+    <div class="summary">
+      <div>
+        <span>Total order price</span><br>
+        <strong id="total">GH₵4.50</strong>
+      </div>
+      <span>Ghana cedis</span>
+    </div>
+
+    <button class="checkout" disabled>
+      Checkout Not Available Yet
     </button>
-  </form>
 
-  <p class="notice">
-    <strong>Important:</strong> Online payments and automatic
-    data delivery are not yet active. Please do not send money
-    through this website yet.
-  </p>
-</div>
+    <p class="secure-note">
+      🔒 Online payment and automatic data delivery are not connected yet.
+      Please do not send money manually based on this page.
+    </p>
+  </section>
+</main>
 
 <footer>
-  <p>MYLOZ DATA © 2026</p>
-  <p>Affordable data, made simple.</p>
+  <strong>MYLOZ DATA</strong><br>
+  Affordable data. Better connections.<br>
+  © 2026 MYLOZ DATA. All rights reserved.
 </footer>
+
+<script>
+function chooseBundle(name, price) {
+  if (name !== "1GB") {
+    showMessage();
+    return;
+  }
+
+  document.getElementById("bundle").value = "1GB";
+  updateSummary();
+  document.getElementById("order").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+}
+
+function updateSummary() {
+  const select = document.getElementById("bundle");
+  const option = select.options[select.selectedIndex];
+  const price = Number(option.dataset.price || 4.50);
+  document.getElementById("total").textContent =
+    "GH₵" + price.toFixed(2);
+}
+
+function showMessage() {
+  alert("This bundle is coming soon. MTN 1GB is currently listed.");
+}
+
+function detectNetwork() {
+  const input = document.getElementById("payment");
+  const select = document.getElementById("paymentNetwork");
+  const result = document.getElementById("networkResult");
+
+  let number = input.value.replace(/\D/g, "");
+
+  if (number.startsWith("233")) {
+    number = "0" + number.slice(3);
+  }
+
+  const prefix = number.length >= 3 ? number.slice(0, 3) : "";
+
+  const prefixes = {
+    "MTN MoMo": ["024", "025", "053", "054", "055", "059"],
+    "Telecel Cash": ["020", "050"],
+    "AT Money": ["026", "027", "056", "057"]
+  };
+
+  let found = "";
+
+  for (const network in prefixes) {
+    if (prefixes[network].includes(prefix)) {
+      found = network;
+      break;
+    }
+  }
+
+  if (number.length < 3) {
+    result.style.display = "none";
+    select.value = "";
+    return;
+  }
+
+  result.style.display = "block";
+
+  if (found) {
+    select.value = found;
+    result.textContent =
+      "Suggested network: " + found +
+      ". Please confirm this is correct.";
+  } else {
+    select.value = "";
+    result.textContent =
+      "Network not recognised from this prefix. Please select your network.";
+  }
+}
+
+updateSummary();
+</script>
 
 </body>
 </html>
