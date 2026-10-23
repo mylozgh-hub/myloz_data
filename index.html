@@ -4,39 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#101a35">
-<meta name="description" content="Buy affordable MTN data bundles with MYLOZ DATA in Ghana.">
-<title>MYLOZ DATA | Affordable Data Bundles</title>
+<title>MYLOZ DATA | Ghana Data Bundles</title>
 
 <style>
 :root {
   --yellow: #ffcc00;
   --navy: #101a35;
   --blue: #2458d3;
-  --light: #f4f7fc;
-  --text: #172033;
-  --muted: #68738a;
-  --white: #ffffff;
+  --bg: #f3f6fc;
+  --text: #18223b;
+  --muted: #69748b;
+  --white: #fff;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--light);
   color: var(--text);
+  background: var(--bg);
 }
 
 header {
-  background: var(--navy);
-  color: white;
-  padding: 17px 6%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
+  padding: 17px 6%;
+  color: white;
+  background: var(--navy);
 }
 
 .logo {
@@ -45,94 +42,76 @@ header {
   letter-spacing: 1px;
 }
 
-.logo span {
-  color: var(--yellow);
-}
+.logo span { color: var(--yellow); }
 
-.status {
+.country {
   font-size: 12px;
-  background: #23304d;
-  padding: 8px 12px;
+  background: #263452;
+  padding: 9px 12px;
   border-radius: 20px;
 }
 
 .hero {
-  background: linear-gradient(135deg, #101a35, #2349a5);
+  padding: 45px 6%;
   color: white;
-  padding: 42px 6% 48px;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(125deg, #101a35, #2853b9);
 }
 
-.hero:after {
-  content: "5G";
-  position: absolute;
-  right: 5%;
-  top: 12px;
-  font-size: clamp(85px, 18vw, 170px);
-  font-weight: 900;
-  color: rgba(255,255,255,.07);
-  transform: rotate(-10deg);
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
 }
 
-.hero-content {
-  max-width: 760px;
-  position: relative;
-  z-index: 1;
-}
-
-.badge {
+.tag {
   display: inline-block;
   background: var(--yellow);
   color: var(--navy);
-  padding: 8px 13px;
-  border-radius: 20px;
+  font-weight: bold;
   font-size: 12px;
-  font-weight: 800;
+  padding: 9px 13px;
+  border-radius: 30px;
 }
 
 .hero h1 {
-  font-size: clamp(32px, 7vw, 52px);
-  line-height: 1.08;
   margin: 18px 0 12px;
+  font-size: clamp(34px, 7vw, 55px);
+  line-height: 1.1;
 }
 
-.hero h1 span {
-  color: var(--yellow);
-}
+.hero h1 span { color: var(--yellow); }
 
 .hero p {
-  color: #e0e7ff;
+  max-width: 500px;
   line-height: 1.7;
-  max-width: 490px;
+  color: #e1e8ff;
 }
 
 main {
-  max-width: 1000px;
+  max-width: 950px;
   margin: auto;
   padding: 28px 16px 45px;
 }
 
-.section-heading {
+.heading {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   margin-bottom: 18px;
 }
 
-.section-heading h2 {
+.heading h2 {
   margin: 0;
   font-size: 24px;
 }
 
-.network-pill {
-  background: #fff2b8;
-  color: #624b00;
-  padding: 8px 12px;
+.network {
+  background: #fff0a8;
+  color: #594500;
   border-radius: 20px;
+  padding: 8px 12px;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .grid {
@@ -141,96 +120,86 @@ main {
   gap: 14px;
 }
 
-.bundle {
+.card {
+  padding: 18px 15px;
   background: white;
   border: 2px solid transparent;
   border-radius: 18px;
-  padding: 19px 15px;
-  box-shadow: 0 5px 20px rgba(18, 32, 65, .06);
+  box-shadow: 0 5px 20px #1423450c;
 }
 
-.bundle.featured {
-  border-color: var(--yellow);
-}
+.card.active { border-color: var(--yellow); }
 
-.bundle-top {
+.card-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 6px;
 }
 
-.mtn-icon {
-  width: 39px;
-  height: 39px;
-  background: var(--yellow);
-  border-radius: 12px;
+.mtn {
+  width: 42px;
+  height: 42px;
   display: grid;
   place-items: center;
+  background: var(--yellow);
+  border-radius: 12px;
   font-weight: 900;
-  color: #222;
   font-size: 11px;
 }
 
 .popular {
-  font-size: 10px;
-  font-weight: 800;
-  color: #6a5100;
-  background: #fff2b8;
+  color: #604a00;
+  background: #fff0b0;
   padding: 6px 8px;
   border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
 }
 
-.bundle h3 {
-  font-size: 26px;
+.card h3 {
   margin: 17px 0 5px;
+  font-size: 25px;
 }
 
-.bundle p {
+.card p {
   margin: 0;
-  font-size: 13px;
   color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .price {
+  margin: 17px 0 13px;
   font-size: 23px;
   font-weight: 900;
-  margin: 18px 0 13px;
 }
 
-.price small {
-  font-size: 12px;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.select-btn {
+.btn {
   width: 100%;
   border: 0;
   border-radius: 10px;
-  padding: 12px 7px;
+  padding: 12px 8px;
   background: var(--navy);
   color: white;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.featured .select-btn {
+.card.active .btn {
   background: var(--yellow);
   color: var(--navy);
 }
 
-.select-btn:active {
-  transform: scale(.98);
-}
+.card.disabled { opacity: .75; }
 
 .panel {
   margin-top: 30px;
-  padding: 23px 18px;
+  padding: 22px 18px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(18, 32, 65, .06);
+  box-shadow: 0 5px 20px #1423450c;
 }
 
 .panel h2 {
@@ -238,17 +207,17 @@ main {
   font-size: 23px;
 }
 
-.panel-intro {
+.intro, .hint {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 label {
   display: block;
-  font-weight: 700;
-  font-size: 13px;
   margin: 17px 0 8px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 input, select {
@@ -256,98 +225,82 @@ input, select {
   padding: 14px;
   border: 1px solid #dbe1ed;
   border-radius: 11px;
-  font-size: 16px;
   background: white;
+  font-size: 16px;
   color: var(--text);
-  outline: none;
 }
 
 input:focus, select:focus {
+  outline: 2px solid #b9ccff;
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(36,88,211,.1);
 }
 
-.hint {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.5;
-  margin-top: 7px;
-}
-
-.network-result {
+.notice {
+  display: none;
   margin-top: 10px;
-  padding: 11px;
-  border-radius: 10px;
+  padding: 12px;
   background: #edf3ff;
+  border-radius: 10px;
   color: #2047a4;
   font-size: 13px;
-  font-weight: 700;
-  display: none;
+  line-height: 1.5;
 }
 
-.summary {
-  margin-top: 22px;
-  padding: 16px;
-  border-radius: 13px;
-  background: #f4f7fc;
+.total {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
   align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 16px;
+  background: #f2f5fb;
+  border-radius: 13px;
 }
 
-.summary span {
-  color: var(--muted);
-  font-size: 13px;
-}
+.total span { color: var(--muted); font-size: 13px; }
 
-.summary strong {
-  font-size: 22px;
-}
+.total strong { font-size: 23px; }
 
 .checkout {
-  margin-top: 17px;
   width: 100%;
-  border: 0;
+  margin-top: 16px;
   padding: 16px;
+  border: 0;
   border-radius: 12px;
-  background: #aeb6c7;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 800;
+  background: #aab2c3;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
   cursor: not-allowed;
 }
 
-.secure-note {
-  font-size: 12px;
+.secure {
+  margin-top: 13px;
   text-align: center;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.6;
-  margin-top: 13px;
 }
 
 footer {
+  padding: 27px 16px;
   text-align: center;
   background: var(--navy);
   color: #dbe3f6;
-  padding: 27px 16px;
   font-size: 13px;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
-footer strong {
-  color: var(--yellow);
-}
+footer strong { color: var(--yellow); }
 
 @media (max-width: 360px) {
-  header { padding: 15px 4%; }
+  header { padding: 14px 4%; }
   .logo { font-size: 19px; }
-  .status { font-size: 10px; }
+  .country { font-size: 10px; }
   .grid { gap: 9px; }
-  .bundle { padding: 13px 10px; }
-  .bundle h3 { font-size: 23px; }
+  .card { padding: 13px 10px; }
+  .card h3 { font-size: 22px; }
   .price { font-size: 20px; }
-  .popular { font-size: 9px; }
 }
 </style>
 </head>
@@ -356,90 +309,76 @@ footer strong {
 
 <header>
   <div class="logo">MYLOZ <span>DATA</span></div>
-  <div class="status">🇬🇭 Ghana Data</div>
+  <div class="country">🇬🇭 Ghana</div>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <span class="badge">⚡ SIMPLE • AFFORDABLE • CONVENIENT</span>
-    <h1>Your Data.<br><span>Your Way.</span></h1>
+  <div class="hero-inner">
+    <span class="tag">⚡ AFFORDABLE DATA BUNDLES</span>
+    <h1>Stay Connected.<br><span>Spend Less.</span></h1>
     <p>
-      Stay connected for less with MYLOZ DATA.
-      Choose your MTN bundle, enter your number and get ready to connect.
+      Welcome to MYLOZ DATA — your destination for affordable
+      MTN data bundles in Ghana.
     </p>
   </div>
 </section>
 
 <main>
-  <div class="section-heading">
+  <div class="heading">
     <h2>Choose Your Data</h2>
-    <span class="network-pill">💛 MTN ONLY</span>
+    <span class="network">💛 MTN DATA</span>
   </div>
 
   <div class="grid">
-    <article class="bundle featured">
-      <div class="bundle-top">
-        <div class="mtn-icon">MTN</div>
-        <span class="popular">POPULAR</span>
+    <article class="card active">
+      <div class="card-top">
+        <div class="mtn">MTN</div>
+        <span class="popular">AVAILABLE</span>
       </div>
       <h3>1GB Data</h3>
-      <p>MTN Ghana data bundle</p>
+      <p>MTN Ghana bundle</p>
       <div class="price">GH₵4.50</div>
-      <button class="select-btn" onclick="chooseBundle('1GB', 4.50)">
-        Select Bundle
-      </button>
+      <button class="btn" onclick="selectBundle()">Select Bundle</button>
     </article>
 
-    <article class="bundle">
-      <div class="bundle-top">
-        <div class="mtn-icon">MTN</div>
-      </div>
+    <article class="card disabled">
+      <div class="card-top"><div class="mtn">MTN</div></div>
       <h3>2GB Data</h3>
-      <p>More data for your day</p>
-      <div class="price">Price pending</div>
-      <button class="select-btn" onclick="showMessage()">
-        Coming Soon
-      </button>
+      <p>More data for browsing</p>
+      <div class="price">Coming soon</div>
+      <button class="btn" onclick="comingSoon()">Coming Soon</button>
     </article>
 
-    <article class="bundle">
-      <div class="bundle-top">
-        <div class="mtn-icon">MTN</div>
-      </div>
+    <article class="card disabled">
+      <div class="card-top"><div class="mtn">MTN</div></div>
       <h3>3GB Data</h3>
-      <p>Browse and stream more</p>
-      <div class="price">Price pending</div>
-      <button class="select-btn" onclick="showMessage()">
-        Coming Soon
-      </button>
+      <p>More data for your day</p>
+      <div class="price">Coming soon</div>
+      <button class="btn" onclick="comingSoon()">Coming Soon</button>
     </article>
 
-    <article class="bundle">
-      <div class="bundle-top">
-        <div class="mtn-icon">MTN</div>
-      </div>
+    <article class="card disabled">
+      <div class="card-top"><div class="mtn">MTN</div></div>
       <h3>5GB Data</h3>
-      <p>For your bigger data needs</p>
-      <div class="price">Price pending</div>
-      <button class="select-btn" onclick="showMessage()">
-        Coming Soon
-      </button>
+      <p>For bigger data needs</p>
+      <div class="price">Coming soon</div>
+      <button class="btn" onclick="comingSoon()">Coming Soon</button>
     </article>
   </div>
 
   <section class="panel" id="order">
-    <h2>Complete Your Order</h2>
-    <p class="panel-intro">
-      Choose the available bundle and enter the phone numbers below.
-      Check all details carefully before proceeding.
+    <h2>📲 Order Your Bundle</h2>
+    <p class="intro">
+      Enter the recipient's number and your payment number.
+      Check that the details are correct.
     </p>
 
-    <label for="bundle">Selected Data Bundle</label>
-    <select id="bundle" onchange="updateSummary()">
-      <option value="1GB" data-price="4.50">MTN 1GB — GH₵4.50</option>
+    <label for="bundle">Data Bundle</label>
+    <select id="bundle">
+      <option value="1GB">MTN 1GB — GH₵4.50</option>
     </select>
 
-    <label for="recipient">Recipient's MTN Phone Number</label>
+    <label for="recipient">Recipient's MTN Number</label>
     <input
       id="recipient"
       type="tel"
@@ -448,7 +387,7 @@ footer strong {
       placeholder="e.g. 0241234567"
       maxlength="13"
     >
-    <p class="hint">Enter the Ghanaian number that should receive the data.</p>
+    <p class="hint">The number that should receive the data.</p>
 
     <label for="payment">Payment Phone Number</label>
     <input
@@ -456,39 +395,38 @@ footer strong {
       type="tel"
       inputmode="numeric"
       autocomplete="tel"
-      placeholder="Enter your payment number"
+      placeholder="Enter payment number"
       maxlength="13"
       oninput="detectNetwork()"
     >
-    <div id="networkResult" class="network-result"></div>
+
+    <div id="notice" class="notice"></div>
 
     <label for="paymentNetwork">Payment Network</label>
     <select id="paymentNetwork">
-      <option value="">Choose payment network</option>
+      <option value="">Select payment network</option>
       <option value="MTN MoMo">MTN MoMo</option>
       <option value="Telecel Cash">Telecel Cash</option>
       <option value="AT Money">AT Money</option>
     </select>
     <p class="hint">
-      The network is suggested from the number prefix. Please confirm it,
-      because number portability can affect automatic detection.
+      Network detection is a suggestion only. Please confirm the network yourself.
+      Number portability can make prefix detection inaccurate.
     </p>
 
-    <div class="summary">
-      <div>
-        <span>Total order price</span><br>
-        <strong id="total">GH₵4.50</strong>
-      </div>
+    <div class="total">
+      <div><span>Total price</span><br><strong>GH₵4.50</strong></div>
       <span>Ghana cedis</span>
     </div>
 
     <button class="checkout" disabled>
-      Checkout Not Available Yet
+      Checkout Coming Soon
     </button>
 
-    <p class="secure-note">
-      🔒 Online payment and automatic data delivery are not connected yet.
-      Please do not send money manually based on this page.
+    <p class="secure">
+      🔒 Online payment and automatic delivery are not connected yet.
+      Do not send money based on this page. Checkout will be enabled
+      after the payment provider and data supplier are connected.
     </p>
   </section>
 </main>
@@ -496,40 +434,25 @@ footer strong {
 <footer>
   <strong>MYLOZ DATA</strong><br>
   Affordable data. Better connections.<br>
-  © 2026 MYLOZ DATA. All rights reserved.
+  © 2026 MYLOZ DATA
 </footer>
 
 <script>
-function chooseBundle(name, price) {
-  if (name !== "1GB") {
-    showMessage();
-    return;
-  }
-
-  document.getElementById("bundle").value = "1GB";
-  updateSummary();
+function selectBundle() {
   document.getElementById("order").scrollIntoView({
     behavior: "smooth",
     block: "start"
   });
 }
 
-function updateSummary() {
-  const select = document.getElementById("bundle");
-  const option = select.options[select.selectedIndex];
-  const price = Number(option.dataset.price || 4.50);
-  document.getElementById("total").textContent =
-    "GH₵" + price.toFixed(2);
-}
-
-function showMessage() {
-  alert("This bundle is coming soon. MTN 1GB is currently listed.");
+function comingSoon() {
+  alert("This MTN bundle is coming soon. The 1GB bundle is listed for now.");
 }
 
 function detectNetwork() {
   const input = document.getElementById("payment");
-  const select = document.getElementById("paymentNetwork");
-  const result = document.getElementById("networkResult");
+  const network = document.getElementById("paymentNetwork");
+  const notice = document.getElementById("notice");
 
   let number = input.value.replace(/\D/g, "");
 
@@ -537,7 +460,13 @@ function detectNetwork() {
     number = "0" + number.slice(3);
   }
 
-  const prefix = number.length >= 3 ? number.slice(0, 3) : "";
+  if (number.length < 3) {
+    notice.style.display = "none";
+    network.value = "";
+    return;
+  }
+
+  const prefix = number.slice(0, 3);
 
   const prefixes = {
     "MTN MoMo": ["024", "025", "053", "054", "055", "059"],
@@ -545,36 +474,28 @@ function detectNetwork() {
     "AT Money": ["026", "027", "056", "057"]
   };
 
-  let found = "";
+  let match = "";
 
-  for (const network in prefixes) {
-    if (prefixes[network].includes(prefix)) {
-      found = network;
+  for (const name in prefixes) {
+    if (prefixes[name].includes(prefix)) {
+      match = name;
       break;
     }
   }
 
-  if (number.length < 3) {
-    result.style.display = "none";
-    select.value = "";
-    return;
-  }
+  notice.style.display = "block";
 
-  result.style.display = "block";
-
-  if (found) {
-    select.value = found;
-    result.textContent =
-      "Suggested network: " + found +
-      ". Please confirm this is correct.";
+  if (match) {
+    network.value = match;
+    notice.textContent =
+      "Suggested payment network: " + match +
+      ". Please confirm it is correct.";
   } else {
-    select.value = "";
-    result.textContent =
-      "Network not recognised from this prefix. Please select your network.";
+    network.value = "";
+    notice.textContent =
+      "Network not recognised. Please choose your payment network manually.";
   }
 }
-
-updateSummary();
 </script>
 
 </body>
